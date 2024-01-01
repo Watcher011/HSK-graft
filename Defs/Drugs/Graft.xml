@@ -1,0 +1,711 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef ParentName="DrugPillBase">
+		<defName>GraftMalari</defName>
+		<label>Прививка от малярии</label>
+		<description>Высокоэфективная прививка от малярии(может даже рабочая).</description>
+		<descriptionHyperlinks>
+			<HediffDef>Malaria</HediffDef>
+		</descriptionHyperlinks>
+		<graphicData>
+			<texPath>Things/Item/Drug/a</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(0.5)</drawSize>
+		</graphicData>
+		<rotatable>false</rotatable>
+		 <tickerType>Normal</tickerType>
+		<statBases>
+			<WorkToMake>640</WorkToMake>
+			<MarketValue>96</MarketValue>
+			<Mass>0.002</Mass>
+		</statBases>
+		<techLevel>Industrial</techLevel>
+		<ingestible>
+			<maxNumToIngestAtOnce>3</maxNumToIngestAtOnce>
+			<drugCategory>Medical</drugCategory>
+			<outcomeDoers>
+				<li Class="SK.IngestionOutcomeDoer_SubstractHediffSeverity">
+					<targetHediff>Malaria</targetHediff>
+					<surstractValue>0.35</surstractValue>
+					<removeIfBelowZero>true</removeIfBelowZero>
+				</li>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+          			<hediffDef>GraftMalariConsumed</hediffDef>
+          			<severity>1.0</severity>
+        		</li>
+			</outcomeDoers>
+		</ingestible>
+		<comps>
+			<li Class="CompProperties_Drug">
+				<listOrder>1000</listOrder>
+				<overdoseSeverityOffset>
+					<min>0.08</min>
+					<max>0.14</max>
+				</overdoseSeverityOffset>
+				<addictiveness>0</addictiveness>
+			</li>
+			  <li Class="CompProperties_Rottable">
+        <daysToRotStart>15</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    	</comps>
+	</ThingDef>
+
+	<HediffDef>
+		<defName>GraftMalariConsumed</defName>
+		<hediffClass>Hediff_High</hediffClass>
+		<label>Вакцина от малярии</label>
+		<description>Антитела атакует клетки патогена, что вызывает слабость и жар</description>
+		<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+		 <scenarioCanAdd>true</scenarioCanAdd>
+		<maxSeverity>3.0</maxSeverity>
+		<isBad>true</isBad>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-0.2</severityPerDay>
+				 <showHoursToRecover>true</showHoursToRecover>
+			</li>
+		</comps>
+		<stages>
+		 <li>
+          <makeImmuneTo>
+            <li>Malaria</li>
+          </makeImmuneTo>
+        </li>
+		</stages>
+	</HediffDef>
+	
+	
+<ThingDef ParentName="DrugPillBase">
+		<defName>GraftFlu</defName>
+		<label>Прививка от гриппа</label>
+		<description>Высокоэфективная прививка от гриппа(Надеюсь что он эффективен).</description>
+		<descriptionHyperlinks>
+			<HediffDef>Flu</HediffDef>
+		</descriptionHyperlinks>
+		<graphicData>
+			<texPath>Things/Item/Drug/b</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(0.5)</drawSize>
+		</graphicData>
+		<rotatable>false</rotatable>
+		  <tickerType>Normal</tickerType>
+		<statBases>
+			<WorkToMake>640</WorkToMake>
+			<MarketValue>96</MarketValue>
+			<Mass>0.002</Mass>
+		</statBases>
+		<techLevel>Industrial</techLevel>
+		<ingestible>
+			<maxNumToIngestAtOnce>3</maxNumToIngestAtOnce>
+			<drugCategory>Medical</drugCategory>
+			<outcomeDoers>
+				<li Class="SK.IngestionOutcomeDoer_SubstractHediffSeverity">
+					<targetHediff>Flu</targetHediff>
+					<surstractValue>0.35</surstractValue>
+					<removeIfBelowZero>true</removeIfBelowZero>
+				</li>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+          			<hediffDef>GraftFluConsumed</hediffDef>
+          			<severity>1.0</severity>
+        		</li>
+			</outcomeDoers>
+		</ingestible>
+		<comps>
+			<li Class="CompProperties_Drug">
+				<listOrder>1000</listOrder>
+				<overdoseSeverityOffset>
+					<min>0.08</min>
+					<max>0.14</max>
+				</overdoseSeverityOffset>
+				<addictiveness>0</addictiveness>
+			</li>
+			  <li Class="CompProperties_Rottable">
+        <daysToRotStart>15</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    	</comps>
+	</ThingDef>
+
+	<HediffDef>
+		<defName>GraftFluConsumed</defName>
+		<label>Вакцина от Гриппа</label>
+		<description>Антитела атакует клетки патогена, что вызывает слабость и жар</description>
+		<hediffClass>Hediff_High</hediffClass>
+		<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+		<scenarioCanAdd>true</scenarioCanAdd>
+		<maxSeverity>3.0</maxSeverity>
+		<isBad>true</isBad>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-0.2</severityPerDay>
+				 <showHoursToRecover>true</showHoursToRecover>
+			</li>
+		</comps>
+		<stages>
+		 <li>
+          <makeImmuneTo>
+            <li>Flu</li>
+			<li>Animal_Flu</li>
+          </makeImmuneTo>
+        </li>
+		</stages>
+	</HediffDef>	
+	
+	
+	
+<ThingDef ParentName="DrugPillBase">
+		<defName>GraftPlague</defName>
+		<label>Прививка от чумы</label>
+		<description>Высокоэфективная прививка от чумы(Срок годности почти истёк).</description>
+		<descriptionHyperlinks>
+			<HediffDef>Plague</HediffDef>
+		</descriptionHyperlinks>
+		<graphicData>
+			<texPath>Things/Item/Drug/c</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(0.5)</drawSize>
+		</graphicData>
+		<rotatable>false</rotatable>
+		  <tickerType>Normal</tickerType>
+		<statBases>
+			<WorkToMake>640</WorkToMake>
+			<MarketValue>96</MarketValue>
+			<Mass>0.002</Mass>
+		</statBases>
+		<techLevel>Industrial</techLevel>
+		<ingestible>
+			<maxNumToIngestAtOnce>3</maxNumToIngestAtOnce>
+			<drugCategory>Medical</drugCategory>
+			<outcomeDoers>
+				<li Class="SK.IngestionOutcomeDoer_SubstractHediffSeverity">
+					<targetHediff>Plague</targetHediff>
+					<surstractValue>0.35</surstractValue>
+					<removeIfBelowZero>true</removeIfBelowZero>
+				</li>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+          			<hediffDef>GraftPlagueConsumed</hediffDef>
+          			<severity>1.0</severity>
+        		</li>
+			</outcomeDoers>
+		</ingestible>
+		<comps>
+			<li Class="CompProperties_Drug">
+				<listOrder>1000</listOrder>
+				<overdoseSeverityOffset>
+					<min>0.08</min>
+					<max>0.14</max>
+				</overdoseSeverityOffset>
+				<addictiveness>0</addictiveness>
+			</li>
+			  <li Class="CompProperties_Rottable">
+        <daysToRotStart>15</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    	</comps>
+	</ThingDef>
+
+	<HediffDef>
+		<defName>GraftPlagueConsumed</defName>
+		<label>Вакцина от Чумы</label>
+		<description>Антитела атакует клетки патогена, что вызывает слабость и жар</description>
+		<hediffClass>Hediff_High</hediffClass>
+		<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+		<scenarioCanAdd>true</scenarioCanAdd>
+		<maxSeverity>3.0</maxSeverity>
+		<isBad>true</isBad>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-0.2</severityPerDay>
+				 <showHoursToRecover>true</showHoursToRecover>
+			</li>
+		</comps>
+		<stages>
+		 <li>
+          <makeImmuneTo>
+            <li>Plague</li>
+          </makeImmuneTo>
+        </li>
+		</stages>
+	</HediffDef>		
+	
+	
+	
+	<ThingDef ParentName="DrugPillBase">
+		<defName>GraftSleepingSickness</defName>
+		<label>Прививка от сонной болезни</label>
+		<description>Высокоэфективная прививка от сонной болезни(кофеин и адреналин , они точно не дадут уснуть).</description>
+		<descriptionHyperlinks>
+			<HediffDef>SleepingSickness</HediffDef>
+		</descriptionHyperlinks>
+		<graphicData>
+			<texPath>Things/Item/Drug/d</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(0.5)</drawSize>
+		</graphicData>
+		<rotatable>false</rotatable>
+		  <tickerType>Normal</tickerType>
+		<statBases>
+			<WorkToMake>640</WorkToMake>
+			<MarketValue>96</MarketValue>
+			<Mass>0.002</Mass>
+		</statBases>
+		<techLevel>Industrial</techLevel>
+		<ingestible>
+			<maxNumToIngestAtOnce>3</maxNumToIngestAtOnce>
+			<drugCategory>Medical</drugCategory>
+			<outcomeDoers>
+				<li Class="SK.IngestionOutcomeDoer_SubstractHediffSeverity">
+					<targetHediff>SleepingSickness</targetHediff>
+					<surstractValue>0.35</surstractValue>
+					<removeIfBelowZero>true</removeIfBelowZero>
+				</li>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+          			<hediffDef>GraftSleepingSicknessConsumed</hediffDef>
+          			<severity>1.0</severity>
+        		</li>
+			</outcomeDoers>
+		</ingestible>
+		<comps>
+			<li Class="CompProperties_Drug">
+				<listOrder>1000</listOrder>
+				<overdoseSeverityOffset>
+					<min>0.08</min>
+					<max>0.14</max>
+				</overdoseSeverityOffset>
+				<addictiveness>0</addictiveness>
+			</li>
+			  <li Class="CompProperties_Rottable">
+        <daysToRotStart>15</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    	</comps>
+	</ThingDef>
+
+	<HediffDef>
+		<defName>GraftSleepingSicknessConsumed</defName>
+		<label>Вакцина от Сонной болезни</label>
+		<description>Антитела атакует клетки патогена, что вызывает слабость и жар</description>
+		<hediffClass>Hediff_High</hediffClass>
+		<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+		<scenarioCanAdd>true</scenarioCanAdd>
+		<maxSeverity>3.0</maxSeverity>
+		<isBad>true</isBad>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-0.2</severityPerDay>
+				 <showHoursToRecover>true</showHoursToRecover>
+			</li>
+		</comps>
+		<stages>
+		<li>
+          <makeImmuneTo>
+            <li>SleepingSickness</li>
+          </makeImmuneTo>
+        </li>
+		</stages>
+	</HediffDef>		
+	
+	<ThingDef ParentName="DrugPillBase">
+		<defName>GraftCoronavirus</defName>
+		<label>Прививка Файзер</label>
+		<description>Высокоэфективная прививка от короновируса(Содержит до 10% наноботов).</description>
+		<descriptionHyperlinks>
+			<HediffDef>Coronavirus</HediffDef>
+		</descriptionHyperlinks>
+		<graphicData>
+			<texPath>Things/Item/Drug/e</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(0.5)</drawSize>
+		</graphicData>
+		<rotatable>false</rotatable>
+		  <tickerType>Normal</tickerType>
+		<statBases>
+			<WorkToMake>640</WorkToMake>
+			<MarketValue>96</MarketValue>
+			<Mass>0.002</Mass>
+		</statBases>
+		<techLevel>Industrial</techLevel>
+		<ingestible>
+			<maxNumToIngestAtOnce>3</maxNumToIngestAtOnce>
+			<drugCategory>Medical</drugCategory>
+			<outcomeDoers>
+				<li Class="SK.IngestionOutcomeDoer_SubstractHediffSeverity">
+					<targetHediff>Coronavirus</targetHediff>
+					<surstractValue>0.35</surstractValue>
+					<removeIfBelowZero>true</removeIfBelowZero>
+				</li>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+          			<hediffDef>GraftSCoronavirusConsumed</hediffDef>
+          			<severity>1.0</severity>
+        		</li>
+			</outcomeDoers>
+		</ingestible>
+		<comps>
+			<li Class="CompProperties_Drug">
+				<listOrder>1000</listOrder>
+				<overdoseSeverityOffset>
+					<min>0.08</min>
+					<max>0.14</max>
+				</overdoseSeverityOffset>
+				<addictiveness>0</addictiveness>
+			</li>
+			  <li Class="CompProperties_Rottable">
+        <daysToRotStart>15</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    	</comps>
+	</ThingDef>
+
+	<HediffDef>
+		<defName>GraftSCoronavirusConsumed</defName>
+		<label>Вакцина от Короновируса</label>
+		<description>Антитела атакует клетки патогена, что вызывает слабость и жар</description>
+		<hediffClass>Hediff_High</hediffClass>
+		<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+		<scenarioCanAdd>true</scenarioCanAdd>
+		<maxSeverity>3.0</maxSeverity>
+		<isBad>true</isBad>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-0.2</severityPerDay>
+				 <showHoursToRecover>true</showHoursToRecover>
+			</li>
+		</comps>
+		<stages>
+		<li>
+          <makeImmuneTo>
+            <li>Coronavirus</li>
+          </makeImmuneTo>
+        </li>
+		</stages>
+	</HediffDef>		
+	
+
+
+
+<ThingDef ParentName="DrugPillBase">
+		<defName>GraftEbola</defName>
+		<label>Прививка от Эболы</label>
+		<description>Высокоэфективная прививка от Геморрагической лихорадки Эбола(да где вы её откопали?).</description>
+		<descriptionHyperlinks>
+			<HediffDef>Ebola</HediffDef>
+		</descriptionHyperlinks>
+		<graphicData>
+			<texPath>Things/Item/Drug/f</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(0.5)</drawSize>
+		</graphicData>
+		<rotatable>false</rotatable>
+		  <tickerType>Normal</tickerType>
+		<statBases>
+			<WorkToMake>640</WorkToMake>
+			<MarketValue>96</MarketValue>
+			<Mass>0.002</Mass>
+		</statBases>
+		<techLevel>Industrial</techLevel>
+		<ingestible>
+			<maxNumToIngestAtOnce>3</maxNumToIngestAtOnce>
+			<drugCategory>Medical</drugCategory>
+			<outcomeDoers>
+				<li Class="SK.IngestionOutcomeDoer_SubstractHediffSeverity">
+					<targetHediff>Ebola</targetHediff>
+					<surstractValue>0.35</surstractValue>
+					<removeIfBelowZero>true</removeIfBelowZero>
+				</li>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+          			<hediffDef>GraftEbolaConsumed</hediffDef>
+          			<severity>1.0</severity>
+        		</li>
+			</outcomeDoers>
+		</ingestible>
+		<comps>
+			<li Class="CompProperties_Drug">
+				<listOrder>1000</listOrder>
+				<overdoseSeverityOffset>
+					<min>0.08</min>
+					<max>0.14</max>
+				</overdoseSeverityOffset>
+				<addictiveness>0</addictiveness>
+			</li>
+			  <li Class="CompProperties_Rottable">
+        <daysToRotStart>15</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    	</comps>
+	</ThingDef>
+
+	<HediffDef>
+		<defName>GraftEbolaConsumed</defName>
+		<label>Вакцина от Эболы</label>
+		<description>Антитела атакует клетки патогена, что вызывает слабость и жар</description>
+		<hediffClass>Hediff_High</hediffClass>
+		<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+		<scenarioCanAdd>true</scenarioCanAdd>
+		<maxSeverity>3.0</maxSeverity>
+		<isBad>true</isBad>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-0.2</severityPerDay>
+				 <showHoursToRecover>true</showHoursToRecover>
+			</li>
+		</comps>
+		<stages>
+		<li>
+          <makeImmuneTo>
+            <li>Ebola</li>
+          </makeImmuneTo>
+        </li>
+		</stages>
+	</HediffDef>	
+
+
+<ThingDef ParentName="DrugPillBase">
+		<defName>GraftMeasles</defName>
+		<label>Прививка от Кори</label>
+		<description>Высокоэфективная прививка от Кори(это же лечится ,да?).</description>
+		<descriptionHyperlinks>
+			<HediffDef>Measles</HediffDef>
+		</descriptionHyperlinks>
+		<graphicData>
+			<texPath>Things/Item/Drug/f</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(0.5)</drawSize>
+		</graphicData>
+		<rotatable>false</rotatable>
+		  <tickerType>Normal</tickerType>
+		<statBases>
+			<WorkToMake>640</WorkToMake>
+			<MarketValue>96</MarketValue>
+			<Mass>0.002</Mass>
+		</statBases>
+		<techLevel>Industrial</techLevel>
+		<ingestible>
+			<maxNumToIngestAtOnce>3</maxNumToIngestAtOnce>
+			<drugCategory>Medical</drugCategory>
+			<outcomeDoers>
+				<li Class="SK.IngestionOutcomeDoer_SubstractHediffSeverity">
+					<targetHediff>Measles</targetHediff>
+					<surstractValue>0.35</surstractValue>
+					<removeIfBelowZero>true</removeIfBelowZero>
+				</li>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+          			<hediffDef>GraftMeaslesConsumed</hediffDef>
+          			<severity>1.0</severity>
+        		</li>
+			</outcomeDoers>
+		</ingestible>
+		<comps>
+			<li Class="CompProperties_Drug">
+				<listOrder>1000</listOrder>
+				<overdoseSeverityOffset>
+					<min>0.08</min>
+					<max>0.14</max>
+				</overdoseSeverityOffset>
+				<addictiveness>0</addictiveness>
+			</li>
+			  <li Class="CompProperties_Rottable">
+        <daysToRotStart>15</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    	</comps>
+	</ThingDef>
+
+	<HediffDef>
+		<defName>GraftMeaslesConsumed</defName>
+		<label>Вакцина от Кори</label>
+		<description>Антитела атакует клетки патогена, что вызывает слабость и жар</description>
+		<hediffClass>Hediff_High</hediffClass>
+		<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+		<scenarioCanAdd>true</scenarioCanAdd>
+		<maxSeverity>3.0</maxSeverity>
+		<isBad>true</isBad>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-0.2</severityPerDay>
+				 <showHoursToRecover>true</showHoursToRecover>
+			</li>
+		</comps>
+		<stages>
+		<li>
+          <makeImmuneTo>
+            <li>Measles</li>
+          </makeImmuneTo>
+        </li>
+		</stages>
+	</HediffDef>	
+
+
+	
+<ThingDef ParentName="DrugPillBase">
+		<defName>GraftPneumonia</defName>
+		<label>Прививка от Пневмонии</label>
+		<description>Высокоэфективная прививка от Пневмонии(это же лечится ,да?).</description>
+		<descriptionHyperlinks>
+			<HediffDef>Pneumonia</HediffDef>
+		</descriptionHyperlinks>
+		<graphicData>
+			<texPath>Things/Item/Drug/f</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(0.5)</drawSize>
+		</graphicData>
+		<rotatable>false</rotatable>
+		  <tickerType>Normal</tickerType>
+		<statBases>
+			<WorkToMake>640</WorkToMake>
+			<MarketValue>96</MarketValue>
+			<Mass>0.002</Mass>
+		</statBases>
+		<techLevel>Industrial</techLevel>
+		<ingestible>
+			<maxNumToIngestAtOnce>3</maxNumToIngestAtOnce>
+			<drugCategory>Medical</drugCategory>
+			<outcomeDoers>
+				<li Class="SK.IngestionOutcomeDoer_SubstractHediffSeverity">
+					<targetHediff>Pneumonia</targetHediff>
+					<surstractValue>0.35</surstractValue>
+					<removeIfBelowZero>true</removeIfBelowZero>
+				</li>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+          			<hediffDef>GraftPneumoniaConsumed</hediffDef>
+          			<severity>1.0</severity>
+        		</li>
+			</outcomeDoers>
+		</ingestible>
+		<comps>
+			<li Class="CompProperties_Drug">
+				<listOrder>1000</listOrder>
+				<overdoseSeverityOffset>
+					<min>0.08</min>
+					<max>0.14</max>
+				</overdoseSeverityOffset>
+				<addictiveness>0</addictiveness>
+			</li>
+			  <li Class="CompProperties_Rottable">
+        <daysToRotStart>15</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    	</comps>
+	</ThingDef>
+
+	<HediffDef>
+		<defName>GraftPneumoniaConsumed</defName>
+		<label>Вакцина от Пневмонии</label>
+		<description>Антитела атакует клетки патогена, что вызывает слабость и жар</description>
+	<hediffClass>Hediff_High</hediffClass>
+		<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+		<scenarioCanAdd>true</scenarioCanAdd>
+		<maxSeverity>3.0</maxSeverity>
+		<isBad>true</isBad>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-0.2</severityPerDay>
+				 <showHoursToRecover>true</showHoursToRecover>
+			</li>
+		</comps>
+		<stages>
+		<li>
+          <makeImmuneTo>
+            <li>Pneumonia</li>
+          </makeImmuneTo>
+        </li>
+		</stages>
+	</HediffDef>	
+
+
+
+
+<ThingDef ParentName="DrugPillBase">
+		<defName>GraftBlood</defName>
+		<label>Система очистки крови</label>
+		<description>Система что содержит набор лекарств, направленных на подавление болезнетворных бактерий или грибков,устраняет заражение</description>
+		<descriptionHyperlinks>
+			<HediffDef>WoundInfection</HediffDef>
+		</descriptionHyperlinks>
+		<graphicData>
+			<texPath>Things/Item/Drug/Qure</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(1)</drawSize>
+		</graphicData>
+		<rotatable>false</rotatable>
+		 <tickerType>Normal</tickerType>
+		<statBases>
+			<WorkToMake>640</WorkToMake>
+			<MarketValue>300</MarketValue>
+			<Mass>3</Mass>
+		</statBases>
+		<techLevel>Industrial</techLevel>
+		<ingestible>
+			<maxNumToIngestAtOnce>3</maxNumToIngestAtOnce>
+			<drugCategory>Medical</drugCategory>
+			<outcomeDoers>
+				<li Class="SK.IngestionOutcomeDoer_SubstractHediffSeverity">
+					<targetHediff>WoundInfection</targetHediff>
+					<surstractValue>0.35</surstractValue>
+					<removeIfBelowZero>true</removeIfBelowZero>
+				</li>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+          			<hediffDef>GraftWoundInfectionConsumed</hediffDef>
+          			<severity>1.0</severity>
+        		</li>
+			</outcomeDoers>
+		</ingestible>
+		<comps>
+			<li Class="CompProperties_Drug">
+				<listOrder>1000</listOrder>
+				<overdoseSeverityOffset>
+					<min>0.08</min>
+					<max>0.14</max>
+				</overdoseSeverityOffset>
+				<addictiveness>0</addictiveness>
+			</li>
+			  <li Class="CompProperties_Rottable">
+        <daysToRotStart>45</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    	</comps>
+	</ThingDef>
+
+	<HediffDef>
+		<defName>GraftWoundInfectionConsumed</defName>
+		<hediffClass>Hediff_High</hediffClass>
+		<label>Очистка крови</label>
+		<description>Антитела атакует клетки патогена, что вызывает слабость и жар</description>
+		<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+		 <scenarioCanAdd>true</scenarioCanAdd>
+		<maxSeverity>3.0</maxSeverity>
+		<isBad>true</isBad>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-0.5</severityPerDay>
+				 <showHoursToRecover>true</showHoursToRecover>
+			</li>
+		</comps>
+		 <stages>
+      <li>
+	     <minSeverity>0.1</minSeverity>
+        <label>withdrawal</label>
+        <restFallFactorOffset>0.3</restFallFactorOffset>
+        <socialFightChanceFactor>1.0</socialFightChanceFactor>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.20</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.20</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.20</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+	</HediffDef>
+
+
+
+	
+</Defs>

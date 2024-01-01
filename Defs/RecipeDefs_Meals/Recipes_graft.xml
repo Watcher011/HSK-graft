@@ -1,0 +1,548 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<RecipeDef>
+		<defName>MakeGraftMalari</defName>
+		<label>Сделать прививку от малярии</label>
+		<description>Сделать прививку от малярии.3 дозы.</description>
+		<jobString>Делает вакцину</jobString>
+		<workSpeedStat>DrugCookingSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Chemlab_Medicine_Drink</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<workAmount>1500</workAmount>
+		<recipeUsers>
+			<li>meditable</li>
+			<li>DrugLab</li>
+		</recipeUsers>
+		<targetCountAdjustment>1</targetCountAdjustment>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>MedicineHerbal</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>MedicalDrink</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Neutroamine</li>
+					</thingDefs>
+				</filter>
+				<count>3</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+		    	<li>MedicalDrink</li>
+				<li>Neutroamine</li>
+				<li>MedicineHerbal</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<GraftMalari>3</GraftMalari>
+		</products>
+		<skillRequirements>
+			<Medicine>5</Medicine>
+		</skillRequirements>
+		<workSkill>Medicine</workSkill>
+		<researchPrerequisite>PenoxycylineProduction</researchPrerequisite>
+	</RecipeDef>
+
+<RecipeDef>
+		<defName>MakeGraftFlu</defName>
+		<label>Сделать прививку от гриппа</label>
+		<description>Сделать прививку от гриппа.3 дозы.</description>
+		<jobString>Делает вакцину</jobString>
+		<workSpeedStat>DrugCookingSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Chemlab_Medicine_Drink</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<workAmount>1500</workAmount>
+		<recipeUsers>
+			<li>meditable</li>
+			<li>DrugLab</li>
+		</recipeUsers>
+		<targetCountAdjustment>1</targetCountAdjustment>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>MedicineHerbal</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>MedicalDrink</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Neutroamine</li>
+					</thingDefs>
+				</filter>
+				<count>3</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+			    <li>MedicalDrink</li>
+				<li>Neutroamine</li>
+				<li>MedicineHerbal</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<GraftFlu>3</GraftFlu>
+		</products>
+		<skillRequirements>
+			<Medicine>5</Medicine>
+		</skillRequirements>
+		<workSkill>Medicine</workSkill>
+		<researchPrerequisite>PenoxycylineProduction</researchPrerequisite>
+	</RecipeDef>
+
+
+<RecipeDef>
+		<defName>MakeGraftPlague</defName>
+		<label>Сделать прививку от чумы</label>
+		<description>Сделать прививку от чумы.3 дозы.</description>
+		<jobString>Делает вакцину</jobString>
+		<workSpeedStat>DrugCookingSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Chemlab_Medicine_Drink</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<workAmount>1500</workAmount>
+		<recipeUsers>
+			<li>meditable</li>
+			<li>DrugLab</li>
+		</recipeUsers>
+		<targetCountAdjustment>1</targetCountAdjustment>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>MedicineHerbal</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>MedicalDrink</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Neutroamine</li>
+					</thingDefs>
+				</filter>
+				<count>3</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+			    <li>MedicalDrink</li>
+				<li>Neutroamine</li>
+				<li>MedicineHerbal</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<GraftPlague>3</GraftPlague>
+		</products>
+		<skillRequirements>
+			<Medicine>5</Medicine>
+		</skillRequirements>
+		<workSkill>Medicine</workSkill>
+		<researchPrerequisite>PenoxycylineProduction</researchPrerequisite>
+	</RecipeDef>
+
+
+<RecipeDef>
+		<defName>MakeGraftSleepingSickness</defName>
+		<label>Сделать прививку от сонной болезни</label>
+		<description>Сделать прививку от сонной болезни.3 дозы.</description>
+		<jobString>Делает вакцину</jobString>
+		<workSpeedStat>DrugCookingSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Chemlab_Medicine_Drink</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<workAmount>1500</workAmount>
+		<recipeUsers>
+			<li>meditable</li>
+			<li>DrugLab</li>
+		</recipeUsers>
+		<targetCountAdjustment>1</targetCountAdjustment>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>MedicineHerbal</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>MedicalDrink</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Neutroamine</li>
+					</thingDefs>
+				</filter>
+				<count>3</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+			   <li>MedicalDrink</li>
+				<li>Neutroamine</li>
+				<li>MedicineHerbal</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<GraftSleepingSickness>3</GraftSleepingSickness>
+		</products>
+		<skillRequirements>
+			<Medicine>5</Medicine>
+		</skillRequirements>
+		<workSkill>Medicine</workSkill>
+		<researchPrerequisite>PenoxycylineProduction</researchPrerequisite>
+	</RecipeDef>
+	
+	<RecipeDef>
+		<defName>MakeGraftCoronavirus</defName>
+		<label>Сделать прививку от короновируса</label>
+		<description>Сделать прививку от короновируса.3 дозы.</description>
+		<jobString>Делает вакцину</jobString>
+		<workSpeedStat>DrugCookingSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Chemlab_Medicine_Drink</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<workAmount>1500</workAmount>
+		<recipeUsers>
+			<li>meditable</li>
+			<li>DrugLab</li>
+		</recipeUsers>
+		<targetCountAdjustment>1</targetCountAdjustment>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>MedicineIndustrial</li>
+					</thingDefs>
+				</filter>
+				<count>2</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>MedicalDrink</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Neutroamine</li>
+					</thingDefs>
+				</filter>
+				<count>3</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+			    <li>MedicalDrink</li>
+				<li>Neutroamine</li>
+				<li>MedicineIndustrial</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<GraftCoronavirus>3</GraftCoronavirus>
+		</products>
+		<skillRequirements>
+			<Medicine>8</Medicine>
+		</skillRequirements>
+		<workSkill>Medicine</workSkill>
+		<researchPrerequisite>PenoxycylineProduction</researchPrerequisite>
+	</RecipeDef>
+	
+	
+	
+	
+	<RecipeDef>
+		<defName>MakeGraftEbola</defName>
+		<label>Сделать прививку от Эболы</label>
+		<description>Сделать прививку от Эболы.3 дозы.</description>
+		<jobString>Делает вакцину</jobString>
+		<workSpeedStat>DrugCookingSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Chemlab_Medicine_Drink</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<workAmount>1500</workAmount>
+		<recipeUsers>
+			<li>meditable</li>
+			<li>DrugLab</li>
+		</recipeUsers>
+		<targetCountAdjustment>1</targetCountAdjustment>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>MedicineIndustrial</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>MedicalDrink</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Neutroamine</li>
+					</thingDefs>
+				</filter>
+				<count>4</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+		    	<li>MedicalDrink</li>
+				<li>Neutroamine</li>
+				<li>MedicineIndustrial</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<GraftEbola>3</GraftEbola>
+		</products>
+		<skillRequirements>
+			<Medicine>6</Medicine>
+		</skillRequirements>
+		<workSkill>Medicine</workSkill>
+		<researchPrerequisite>PenoxycylineProduction</researchPrerequisite>
+	</RecipeDef>
+	
+	
+	
+	<RecipeDef>
+		<defName>MakeGraftMeasles</defName>
+		<label>Сделать прививку от Кори</label>
+		<description>Сделать прививку от Кори.3 дозы.</description>
+		<jobString>Делает вакцину</jobString>
+		<workSpeedStat>DrugCookingSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Chemlab_Medicine_Drink</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<workAmount>1500</workAmount>
+		<recipeUsers>
+			<li>meditable</li>
+			<li>DrugLab</li>
+		</recipeUsers>
+		<targetCountAdjustment>1</targetCountAdjustment>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>MedicineIndustrial</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>MedicalDrink</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Neutroamine</li>
+					</thingDefs>
+				</filter>
+				<count>2</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+			    <li>MedicalDrink</li>
+				<li>Neutroamine</li>
+				<li>MedicineIndustrial</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<GraftMeasles>3</GraftMeasles>
+		</products>
+		<skillRequirements>
+			<Medicine>3</Medicine>
+		</skillRequirements>
+		<workSkill>Medicine</workSkill>
+		<researchPrerequisite>PenoxycylineProduction</researchPrerequisite>
+	</RecipeDef>
+	
+	
+	
+	<RecipeDef>
+		<defName>MakeGraftPneumonia</defName>
+		<label>Сделать прививку от Пневмонии</label>
+		<description>Сделать прививку от Пневмонии.3 дозы.</description>
+		<jobString>Делает вакцину</jobString>
+		<workSpeedStat>DrugCookingSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Chemlab_Medicine_Drink</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<workAmount>1500</workAmount>
+		<recipeUsers>
+			<li>meditable</li>
+			<li>DrugLab</li>
+		</recipeUsers>
+		<targetCountAdjustment>1</targetCountAdjustment>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>MedicineIndustrial</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>MedicalDrink</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Neutroamine</li>
+					</thingDefs>
+				</filter>
+				<count>3</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+		    	<li>MedicalDrink</li>
+				<li>Neutroamine</li>
+				<li>MedicineIndustrial</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<GraftPneumonia>3</GraftPneumonia>
+		</products>
+		<skillRequirements>
+			<Medicine>3</Medicine>
+		</skillRequirements>
+		<workSkill>Medicine</workSkill>
+		<researchPrerequisite>PenoxycylineProduction</researchPrerequisite>
+	</RecipeDef>
+	
+	
+	
+	
+	
+	
+	<RecipeDef>
+		<defName>MakeGraftWoundInfection</defName>
+		<label>Сделать систему очистки</label>
+		<description>Сделать систему очистки крови.3 набора.</description>
+		<jobString>Делает набор</jobString>
+		<workSpeedStat>DrugCookingSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Chemlab_Medicine_Drink</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<workAmount>1500</workAmount>
+		<recipeUsers>
+			<li>meditable</li>
+			<li>DrugLab</li>
+		</recipeUsers>
+		<targetCountAdjustment>1</targetCountAdjustment>
+		<ingredients>
+		    <li>
+				<filter>
+					<thingDefs>
+						<li>ComponentSpacer</li>
+					</thingDefs>
+				</filter>
+				<count>3</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>MedicineIndustrial</li>
+					</thingDefs>
+				</filter>
+				<count>4</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>MedicalDrink</li>
+					</thingDefs>
+				</filter>
+				<count>3</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>AntidoteSafe</li>
+					</thingDefs>
+				</filter>
+				<count>3</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+			    <li>ComponentSpacer</li>
+		    	<li>MedicalDrink</li>
+				<li>AntidoteSafe</li>
+				<li>MedicineIndustrial</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<GraftBlood>3</GraftBlood>
+		</products>
+		<skillRequirements>
+			<Medicine>7</Medicine>
+		</skillRequirements>
+		<workSkill>Medicine</workSkill>
+		<researchPrerequisite>PenoxycylineProduction</researchPrerequisite>
+	</RecipeDef>
+</Defs>
